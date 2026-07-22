@@ -1,0 +1,203 @@
+/* Definition of Color and Font Variables */
+:root {
+    --primary-color: #055a05;     /* Forest green */
+    --secondary-color: #f4a261;   /* Warm sand */
+    --accent1-color: #264653;     /* Dark slate blue */
+    --accent2-color: #e9c46a;     /* Light golden yellow */
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* Box-Model Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Style */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+
+/* Layout Centering and Width Limitation */
+header, main, footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* Heading Styling */
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+/* Margins and Spacing */
+p, section, article {
+    margin: 16px 0;
+}
+
+/* --- Header & Navigation (CSS Grid + Flexbox) --- */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 16px 0;
+}
+
+header .logo {
+    width: 120px;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--accent1-color);
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+}
+
+/* --- Hero Div Styling and Overlays --- */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.85;
+    background-color: var(--accent1-color);
+    color: #fff;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 16px;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 12px;
+}
+
+/* --- History Section --- */
+.history {
+    padding: 16px 0;
+}
+
+/* --- Adventures Section (5 Images Grid/Flex) --- */
+.adventures {
+    padding: 16px 0;
+}
+
+.adventure-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.adventure-gallery figure {
+    flex: 1;
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.adventure-gallery figcaption {
+    font-size: 0.85rem;
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+/* --- Footer Section --- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid #ccc;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 12px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 30px;
+    height: auto;
+}
+
+
+
+/* Container principal que deixa os blocos lado a lado */
+.history-content {
+  display: flex;
+  align-items: center;         /* Centraliza o texto e a imagem verticalmente */
+  justify-content: space-between; /* Distribui as colunas igualmente */
+  gap: 24px;                   /* Espaço de respiro entre o texto e a foto */
+  max-width: 1100px;           /* Evita que o texto estique demais em telas grandes */
+  margin: 0 auto;              /* Centraliza o bloco inteiro na página */
+}
+
+/* Configuração dos textos nas laterais */
+.history-text {
+  flex: 1;                     /* Faz os dois blocos de texto terem o mesmo tamanho */
+  text-align: justify;         /* Deixa o texto alinhado nas bordas como na imagem */
+  line-height: 1.6;            /* Melhora a leitura do texto */
+}
+
+/* Bloco da imagem no centro */
+.history-image {
+  flex: 1;                     /* Faz o espaço da imagem ter o mesmo tamanho dos textos */
+  display: flex;
+  justify-content: center;     /* Garante a foto exatamente no centro do bloco */
+}
+
+/* Garante que a foto mude de tamanho sem distorcer ou quebrar o layout */
+.history-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;          /* Opcional: deixa os cantos da foto levemente arredondados */
+}
