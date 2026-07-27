@@ -1,11 +1,20 @@
 /* Definition of Color and Font Variables */
 :root {
-    --primary-color: #055a05;     /* Forest green */
-    --secondary-color: #f4a261;   /* Warm sand */
-    --accent1-color: #264653;     /* Dark slate blue */
-    --accent2-color: #e9c46a;     /* Light golden yellow */
+    --primary-color: #055a05;
+    /* Forest green */
+    --secondary-color: #f4a261;
+    /* Warm sand */
+    --accent1-color: #264653;
+    /* Dark slate blue */
+    --accent2-color: #e9c46a;
+    /* Light golden yellow */
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* 2. APPLICATION: Use the variable on the correct element */
+body {
+    background-color: var(--accent2-color);
 }
 
 /* Box-Model Reset */
@@ -22,13 +31,16 @@ body {
 }
 
 /* Layout Centering and Width Limitation */
-header, main, footer {
+header,
+main,
+footer {
     width: 840px;
     margin: 0 auto;
 }
 
 /* Heading Styling */
-h1, h2 {
+h1,
+h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
@@ -39,7 +51,9 @@ h2 {
 }
 
 /* Margins and Spacing */
-p, section, article {
+p,
+section,
+article {
     margin: 16px 0;
 }
 
@@ -168,36 +182,45 @@ footer {
     height: auto;
 }
 
-
-
 /* Container principal que deixa os blocos lado a lado */
 .history-content {
-  display: flex;
-  align-items: center;         /* Centraliza o texto e a imagem verticalmente */
-  justify-content: space-between; /* Distribui as colunas igualmente */
-  gap: 24px;                   /* Espaço de respiro entre o texto e a foto */
-  max-width: 1100px;           /* Evita que o texto estique demais em telas grandes */
-  margin: 0 auto;              /* Centraliza o bloco inteiro na página */
+    display: flex;
+    align-items: center;
+    /* Centraliza o texto e a imagem verticalmente */
+    justify-content: space-between;
+    /* Distribui as colunas igualmente */
+    gap: 24px;
+    /* Espaço de respiro entre o texto e a foto */
+    max-width: 1100px;
+    /* Evita que o texto estique demais em telas grandes */
+    margin: 0 auto;
+    /* Centraliza o bloco inteiro na página */
 }
 
 /* Configuração dos textos nas laterais */
 .history-text {
-  flex: 1;                     /* Faz os dois blocos de texto terem o mesmo tamanho */
-  text-align: justify;         /* Deixa o texto alinhado nas bordas como na imagem */
-  line-height: 1.6;            /* Melhora a leitura do texto */
+    flex: 1;
+    /* Faz os dois blocos de texto terem o mesmo tamanho */
+    text-align: justify;
+    /* Deixa o texto alinhado nas bordas como na imagem */
+    line-height: 1.6;
+    /* Melhora a leitura do texto */
 }
 
 /* Bloco da imagem no centro */
 .history-image {
-  flex: 1;                     /* Faz o espaço da imagem ter o mesmo tamanho dos textos */
-  display: flex;
-  justify-content: center;     /* Garante a foto exatamente no centro do bloco */
+    flex: 1;
+    /* Faz o espaço da imagem ter o mesmo tamanho dos textos */
+    display: flex;
+    justify-content: center;
+    /* Garante a foto exatamente no centro do bloco */
 }
 
 /* Garante que a foto mude de tamanho sem distorcer ou quebrar o layout */
 .history-image img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 4px;          /* Opcional: deixa os cantos da foto levemente arredondados */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    /* Opcional: deixa os cantos da foto levemente arredondados */
 }
