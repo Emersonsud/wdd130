@@ -374,6 +374,17 @@ form button {
     font-size: 0.95rem;
     color: #333;
 }
-iframe {
+
+
+/* Style for the map iframe */
+.map-box iframe {
     border: 0;
 }
+ header {
+    background-color: #e9c46a;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
