@@ -1,13 +1,9 @@
 /* Definition of Color and Font Variables */
 :root {
-    --primary-color: #055a05;
-    /* Forest green */
-    --secondary-color: #f4a261;
-    /* Warm sand */
-    --accent1-color: #264653;
-    /* Dark slate blue */
-    --accent2-color: #e9c46a;
-    /* Light golden yellow */
+    --primary-color: #055a05; /* Forest green */
+    --secondary-color: #f4a261; /* Warm sand */
+    --accent1-color: #264653; /* Dark slate blue */
+    --accent2-color: #e9c46a; /* Light golden yellow */
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -27,16 +23,13 @@ body {
 }
 
 /* Layout Centering and Width Limitation */
-header,
-main,
-footer {
+header, main, footer {
     width: 840px;
     margin: 0 auto;
 }
 
 /* Heading Styling */
-h1,
-h2 {
+h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
@@ -47,9 +40,7 @@ h2 {
 }
 
 /* Margins and Spacing */
-p,
-section,
-article {
+p, section, article {
     margin: 16px 0;
 }
 
@@ -161,16 +152,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 16px 0;
-    border-top: 1px solid #ccc;
-}
-
-.socialmedia {
-    display: flex;
-    gap: 12px;
 }
 
 .socialmedia a {
     text-decoration: none;
+    background-color: #e9c46a;
 }
 
 .socialmedia img {
@@ -178,45 +164,213 @@ footer {
     height: auto;
 }
 
-/* Container principal que deixa os blocos lado a lado */
+/* Main container that places the blocks side by side */
 .history-content {
     display: flex;
-    align-items: center;
-    /* Centraliza o texto e a imagem verticalmente */
-    justify-content: space-between;
-    /* Distribui as colunas igualmente */
-    gap: 24px;
-    /* Espaço de respiro entre o texto e a foto */
-    max-width: 1100px;
-    /* Evita que o texto estique demais em telas grandes */
-    margin: 0 auto;
-    /* Centraliza o bloco inteiro na página */
+    align-items: center; /* Centers text and image vertically */
+    justify-content: space-between; /* Distributes columns equally */
+    gap: 24px; /* Breathing room between text and photo */
+    max-width: 1100px; /* Prevents text from stretching too wide on large screens */
+    margin: 0 auto; /* Centers the entire block on the page */
 }
 
-/* Configuração dos textos nas laterais */
+/* Side text blocks configuration */
 .history-text {
-    flex: 1;
-    /* Faz os dois blocos de texto terem o mesmo tamanho */
-    text-align: justify;
-    /* Deixa o texto alinhado nas bordas como na imagem */
-    line-height: 1.6;
-    /* Melhora a leitura do texto */
+    flex: 1; /* Makes both text blocks the same size */
+    text-align: justify; /* Aligns text to the borders like in the image */
+    line-height: 1.6; /* Improves text readability */
 }
 
-/* Bloco da imagem no centro */
+/* Center image block */
 .history-image {
-    flex: 1;
-    /* Faz o espaço da imagem ter o mesmo tamanho dos textos */
+    flex: 1; /* Makes the image space the same size as the text blocks */
     display: flex;
-    justify-content: center;
-    /* Garante a foto exatamente no centro do bloco */
+    justify-content: center; /* Ensures the photo is exactly in the center of the block */
 }
 
-/* Garante que a foto mude de tamanho sem distorcer ou quebrar o layout */
+/* Ensures the photo resizes without distorting or breaking the layout */
 .history-image img {
     max-width: 100%;
     height: auto;
     display: block;
     border-radius: 4px;
-    /* Opcional: deixa os cantos da foto levemente arredondados */
+}
+
+/* --- Header and Navigation styles --- */
+header {
+    background-color: #e9c46a;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Company Info Section */
+.company-info h1, p {
+    position: relative;
+    text-align: center;
+    margin: 2px 0;
+    color: var(--primary-color);
+    --accent1-color: none;
+}
+
+/* Map + Form Container */
+.contact-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* Iframe configuration (removes inline styles as instructed) */
+.map-box {
+    flex: 1;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px 25px;
+}
+
+/* 1. ROW CONFIGURATION (Main Containers) */
+.name, .email, .message {
+    display: flex;
+    align-items: flex-start; /* Aligns to the top so the radio block doesn't break */
+    margin-bottom: 15px; /* Spacing between the form rows */
+}
+
+/* 2. LEFT-SIDE TEXT CONFIGURATION ONLY (Labels & Legend) */
+.name label, .email label, .message legend {
+    width: 130px; /* Increased to 130px so "Message Purpose" fits perfectly without breaking */
+    margin-right: 25px; /* Distance to the boxes or radio buttons */
+    font-family: var(--body-font);
+}
+
+.message {
+    align-items: center;
+}
+
+/* 3. TEXT INPUTS CONFIGURATION ONLY (Inputs) */
+.name input, .email input {
+    flex: 1; /* Makes the input fill the remaining horizontal space */
+    max-width: 300px; /* Ideal maximum width */
+    padding: 8px; /* Comfortable internal height */
+    box-sizing: border-box; /* Prevents padding from breaking the calculated size */
+}
+
+/* 4. OPTIONS BLOCK CONFIGURATION (Radio buttons stacked vertically) */
+.messagelist {
+    display: flex;
+    flex-direction: column; /* Forces the list to be vertical */
+    gap: 10px; /* Distance between each radio option */
+}
+
+/* Perfect alignment between the radio circle and its text label */
+.messagelist label {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Distance between the radio circle and text */
+    font-family: var(--body-font);
+}
+
+/* Form Styling */
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #777;
+    border-radius: 4px;
+}
+
+fieldset {
+    border: none;
+}
+
+.checkbox-group {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    margin-top: 0;
+    margin-left: 8px;
+}
+
+form button {
+    background-color: #e0e0e0;
+    border: 1px solid #777;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.photo-placeholder {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 50%;
+}
+
+.submit {
+    border-radius: 4px;
+}
+
+/* General Employees Section */
+.employee-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #e9c46a;
+    border: 1px solid #333;
+    margin: 20px 0;
+}
+
+.employee-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Flexbox container to align the 3 profiles side by side */
+.employee-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Individual Employee Card */
+.employee-card {
+    margin: 0;
+    text-align: center;
+}
+
+.employee-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.employee-card figcaption {
+    font-size: 0.95rem;
+    color: #333;
 }
