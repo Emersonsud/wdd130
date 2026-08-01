@@ -374,3 +374,6 @@ form button {
     font-size: 0.95rem;
     color: #333;
 }
+iframe {
+    border: 0;
+}
