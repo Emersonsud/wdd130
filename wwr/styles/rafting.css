@@ -379,12 +379,14 @@ form button {
 /* Style for the map iframe */
 .map-box iframe {
     border: 0;
+    width: 100%;
 }
- header {
-    background-color: #e9c46a;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
+header {
+    display: flex;         /* Definido como flex conforme regra #31 */
+    align-items: center;   /* Centraliza os itens verticalmente */
+    padding: 20px;         /* Definido como 20px conforme regra #31 */
+    background-color: #e9c46a; /* Cor unificada das regras #31 e #58 */
 }
+
 
 
