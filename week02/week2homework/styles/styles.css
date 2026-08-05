@@ -22,7 +22,6 @@ main img {
   height: auto;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   border: 1px solid
-  padding: 10px;
 }
 
 p {
@@ -39,23 +38,10 @@ h1 {
   color: steelblue
 }
 
- a {
+nav a {
   color: white;
+  padding: 10px;
   display: block;
-  
-}
-nav {
   background-color: #4682b4;
-  padding: 10px;          
+  padding: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
