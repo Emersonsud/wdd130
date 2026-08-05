@@ -42,9 +42,9 @@ h1 {
 nav {
   padding: 10px;
   background-color: #4682b4;
+  display: block;
   
 }
 a {
   color: white;
-  display: block;
 }
